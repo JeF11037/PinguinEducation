@@ -42,7 +42,77 @@ namespace PinguinEducation.Alphabet
         private async void Btn_Clicked(object sender, System.EventArgs e)
         {
             Button btn = (Button)sender;
-            await Xamarin.Essentials.TextToSpeech.SpeakAsync(btn.Text, new Xamarin.Essentials.SpeechOptions()
+
+            strongbox.ALPHABET_letter = btn.Text;
+
+            Label lbl = new Label
+            {
+                Text = btn.Text,
+                FontSize = Device.GetNamedSize(NamedSize.Header, typeof(Label)),
+                TextColor = Color.Black
+            };
+
+            Frame dec_lbl = new Frame
+            {
+                Content = lbl,
+                CornerRadius = 50,
+                BackgroundColor = Color.Wheat,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center,
+                Margin = 10,
+                BorderColor = Color.Black,
+            };
+
+            Button tts = new Button
+            {
+                ImageSource = "play.png",
+                BackgroundColor = Color.Wheat,
+                WidthRequest = 200,
+                HeightRequest = 200
+            };
+
+            Frame dec_btn = new Frame
+            {
+                Content = tts,
+                BackgroundColor = Color.Wheat,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center,
+                Margin = 10,
+                BorderColor = Color.Black
+            };
+
+            tts.Clicked += Tts_Clicked;
+
+            StackLayout stack = new StackLayout
+            {
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center,
+                Spacing = 0,
+            };
+
+            stack.Children.Add(dec_lbl);
+            stack.Children.Add(dec_btn);
+
+            Frame frm = new Frame
+            {
+                Content = stack,
+                CornerRadius = 10,
+                BorderColor = Color.Black,
+                BackgroundColor = Color.Wheat,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center,
+            };
+
+            await Navigation.PushAsync(new ContentPage
+            {
+                Content = frm,
+                BackgroundColor = Color.BlanchedAlmond
+            });
+        }
+
+        private async void Tts_Clicked(object sender, System.EventArgs e)
+        {
+            await Xamarin.Essentials.TextToSpeech.SpeakAsync(strongbox.ALPHABET_letter, new Xamarin.Essentials.SpeechOptions()
             {
                 Volume = 1,
                 Pitch = 1,
