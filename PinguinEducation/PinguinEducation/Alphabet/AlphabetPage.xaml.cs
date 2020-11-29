@@ -20,13 +20,14 @@ namespace PinguinEducation.Alphabet
                     {
                         Button btn = new Button
                         {
-                            BackgroundColor = Color.Red,
+                            BackgroundColor = Color.LightGray,
                             BorderColor = Color.Black,
                             BorderWidth = 2,
                             TextColor = Color.Black,
                             FontSize = Device.GetNamedSize(NamedSize.Title, typeof(Label)),
                             CornerRadius = 10,
                             Text = strongbox.ALPHABET_alphabet[letter],
+                            Margin = 4
                         };
                         btn.Clicked += Btn_Clicked;
                         grid.Children.Add(btn, x, y);
@@ -55,20 +56,16 @@ namespace PinguinEducation.Alphabet
             Frame dec_lbl = new Frame
             {
                 Content = lbl,
-                CornerRadius = 50,
                 BackgroundColor = Color.Wheat,
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.Center,
                 Margin = 10,
-                BorderColor = Color.Black,
             };
 
             Button tts = new Button
             {
                 ImageSource = "play.png",
                 BackgroundColor = Color.Wheat,
-                WidthRequest = 200,
-                HeightRequest = 200
             };
 
             Frame dec_btn = new Frame
@@ -78,7 +75,7 @@ namespace PinguinEducation.Alphabet
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.Center,
                 Margin = 10,
-                BorderColor = Color.Black
+                BorderColor = Color.Black,
             };
 
             tts.Clicked += Tts_Clicked;
