@@ -4,7 +4,5 @@
              x:Class="PinguinEducation.Alphabet.AlphabetPage"
              Title="Alphabet"
              BackgroundColor="BlanchedAlmond">
-    <Grid x:Name="grid">
-        
-    </Grid>
+    <Grid x:Name="grid" />
 </ContentPage>

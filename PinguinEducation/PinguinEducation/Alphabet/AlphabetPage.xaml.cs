@@ -6,7 +6,7 @@ namespace PinguinEducation.Alphabet
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AlphabetPage : ContentPage
     {
-        Strongbox strongbox = new Strongbox();
+        AlphabetStorage strongbox = new AlphabetStorage();
         public AlphabetPage()
         {
             InitializeComponent();
@@ -29,6 +29,13 @@ namespace PinguinEducation.Alphabet
                             Text = strongbox.ALPHABET_alphabet[letter],
                             Margin = 4
                         };
+                        foreach (var el in strongbox.ALPHABET_unlocked)
+                        {
+                            if (btn.Text != el)
+                            {
+                                btn.BackgroundColor = Color.Gray;
+                            }
+                        }
                         btn.Clicked += Btn_Clicked;
                         grid.Children.Add(btn, x, y);
                     }

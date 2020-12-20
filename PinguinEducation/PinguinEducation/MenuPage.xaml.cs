@@ -13,7 +13,19 @@ namespace PinguinEducation
 
         private async void Button_Clicked(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new PinguinEducation.Alphabet.AlphabetPage());
+            Button btn = (Button)sender;
+
+            switch (btn.Text)
+            {
+                case "Alphabet":
+                    await Navigation.PushAsync(new PinguinEducation.Alphabet.AlphabetPage());
+                    break;
+                case "Game":
+                    await Navigation.PushAsync(new PinguinEducation.Game.TileMatchingVideoGame());
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
