@@ -18,7 +18,7 @@ namespace PinguinEducation.Alphabet
             tempList.Add(strongbox.ALPHABET_alphabet[0]);
             strongbox.ALPHABET_unlocked = tempList.ToArray();
 
-            strongbox.goal = 100;
+            strongbox.goal = 500;
 
             CreateGrid();
         }

@@ -272,6 +272,7 @@ namespace PinguinEducation.Game
                     tempList.Add(alphabetS.ALPHABET_alphabet[tick]);
                 }
                 alphabetS.ALPHABET_unlocked = tempList.ToArray();
+                alphabetS.goal = Math.Round(alphabetS.goal * 1.25);
                 await Navigation.PopAsync();
             }
         }
