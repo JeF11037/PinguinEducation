@@ -12,7 +12,7 @@ namespace PinguinEducation.Game
         public int score { get; set; }
         public Xamarin.Forms.Color[] color { get 
             {
-                return new Xamarin.Forms.Color[] { Xamarin.Forms.Color.Red, Xamarin.Forms.Color.Green, Xamarin.Forms.Color.Blue };
-            } } 
+                return new Xamarin.Forms.Color[] { Xamarin.Forms.Color.FromHex("C6D8FF"), Xamarin.Forms.Color.FromHex("FFFADD"), Xamarin.Forms.Color.FromHex("FED6BC"), Xamarin.Forms.Color.FromHex("C3FBD8") };
+            } }
     }
 }

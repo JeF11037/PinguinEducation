@@ -8,7 +8,7 @@ namespace PinguinEducation
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MenuPage());
+            MainPage = new NavigationPage(new Alphabet.AlphabetPage());
         }
 
         protected override void OnStart()

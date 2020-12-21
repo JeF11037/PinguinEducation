@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PinguinEducation.Game.TileMatchingVideoGame"
              Title="Game"
-             BackgroundColor="BlanchedAlmond">
+             BackgroundColor="#85AAC5">
     <StackLayout VerticalOptions="FillAndExpand">
         <StackLayout Orientation="Horizontal">
             <Label Text="Score: 0" FontSize="Large" TextColor="Black" VerticalOptions="Start" HorizontalOptions="Start" x:Name="scoreLbl" Margin="20"/>
@@ -12,5 +12,17 @@
         <Frame BackgroundColor="White" CornerRadius="10" Margin="20" VerticalOptions="Center">
             <Grid x:Name="grid" Margin="10"/>
         </Frame>
+        <Button 
+            Text="Mute"
+            TextColor="Black"
+            BackgroundColor="white"
+            FontSize="Title"
+            BorderColor="Black"
+            BorderWidth="2"
+            VerticalOptions="End"
+            HorizontalOptions="End"
+            Clicked="Button_Clicked"
+            />
+        
     </StackLayout>
 </ContentPage>

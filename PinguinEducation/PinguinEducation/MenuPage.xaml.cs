@@ -9,23 +9,12 @@ namespace PinguinEducation
         public MenuPage()
         {
             InitializeComponent();
+            Start();
         }
 
-        private async void Button_Clicked(object sender, System.EventArgs e)
+        private async void Start()
         {
-            Button btn = (Button)sender;
-
-            switch (btn.Text)
-            {
-                case "Alphabet":
-                    await Navigation.PushAsync(new PinguinEducation.Alphabet.AlphabetPage());
-                    break;
-                case "Game":
-                    await Navigation.PushAsync(new PinguinEducation.Game.TileMatchingVideoGame());
-                    break;
-                default:
-                    break;
-            }
+            await Navigation.PushAsync(new PinguinEducation.Alphabet.AlphabetPage());
         }
     }
 }

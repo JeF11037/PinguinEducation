@@ -5,26 +5,7 @@
              BackgroundColor="BlanchedAlmond">
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-            <Button 
-                Text="Alphabet"
-                FontSize="Title"
-                CornerRadius="10"
-                BorderColor="Black"
-                BorderWidth="2"
-                BackgroundColor="Wheat"
-                TextColor="Black"
-                Clicked="Button_Clicked"
-                />
-            <Button 
-                Text="Game"
-                FontSize="Title"
-                CornerRadius="10"
-                BorderColor="Black"
-                BorderWidth="2"
-                BackgroundColor="Wheat"
-                TextColor="Black"
-                Clicked="Button_Clicked"
-                />
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
